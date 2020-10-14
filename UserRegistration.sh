@@ -63,31 +63,35 @@ echo "enter the password"
 read password
 
 len="${#password}"
+if test $len -ge 8 ; then
 
-if test $len -ge 8; then
-
-echo "$password" | grep -q [A-Z]
-
-if test $? -eq 0 ; then
-
-echo "valid password"
-
-else
-echo "enter atleast one capital"
-fi
-
-else
-           else
-echo "please enter atleast 8 characters"
-fi
+    echo "$password" | grep -q [0-9]
 
 
+     if test $? -eq 0 ; then
 
 
+           echo "$password" | grep -q [A-Z]
 
-echo "valid password"
 
-else
-  echo "enter atleast 8 charecters"
+                if test $? -eq 0 ; then
+
+                echo "strong password"
+
+            else
+                 echo "weak password include capital char"
+      fi  
+
+      else
+                echo "please include the numbers in password it is weak password"
+
+      fi
+
+   else
+
+
+    echo "password lenght should be greater than or equal 8 hence weak password"
+
+
 fi
 
