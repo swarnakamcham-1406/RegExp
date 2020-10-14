@@ -44,3 +44,17 @@ else
 
 fi
 
+echo "enter the phone number"
+read value
+
+number="^[+][1-9]{2}-[6789]{1}[0-9]{9}$"
+if [[ $value =~ $number ]]
+then
+
+ echo entered valid phone number;
+
+else
+
+ echo entered invalid phone number;
+
+fi
