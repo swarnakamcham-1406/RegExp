@@ -73,10 +73,17 @@ if test $len -ge 8 ; then
 
            echo "$password" | grep -q [A-Z]
 
+                if test $? -eq 0 ; then
+                        echo "$password" | grep -q [!\@\#\$\&]
+
 
                 if test $? -eq 0 ; then
 
-                echo "strong password"
+		                echo "strong password"
+else
+                echo "enter atleast one special character"
+
+fi
 
             else
                  echo "weak password include capital char"
