@@ -66,6 +66,25 @@ len="${#password}"
 
 if test $len -ge 8; then
 
+echo "$password" | grep -q [A-Z]
+
+if test $? -eq 0 ; then
+
+echo "valid password"
+
+else
+echo "enter atleast one capital"
+fi
+
+else
+           else
+echo "please enter atleast 8 characters"
+fi
+
+
+
+
+
 echo "valid password"
 
 else
