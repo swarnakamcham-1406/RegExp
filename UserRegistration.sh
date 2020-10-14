@@ -14,3 +14,19 @@ else
  echo you enterd invalid userName;
 
 fi
+
+echo "enter lastname"
+read lastname
+
+lastName="^([A_Z]+){1}([a-z0-9]+){3,15}$"
+if [[ $value =~ $lastName ]]
+then
+
+echo enter valid LastName;
+
+else
+ echo you enterd invalid LastName;
+
+fi
+
+
