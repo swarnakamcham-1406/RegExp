@@ -29,4 +29,18 @@ else
 
 fi
 
+echo "enter the email"
+read value
+
+email="^[A-Za-z0-9._%+-]+@[A-Za-z0-9]+\.[A-Za-z]+\.[a-z]{2,4}$"
+if [[ $value =~ $email ]]
+then
+
+ echo entered valid email;
+
+else
+
+ echo you entered invalid email;
+
+fi
 
