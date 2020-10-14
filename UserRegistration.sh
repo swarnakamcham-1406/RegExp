@@ -58,3 +58,17 @@ else
  echo entered invalid phone number;
 
 fi
+echo "enter the password"
+
+read password
+
+len="${#password}"
+
+if test $len -ge 8; then
+
+echo "valid password"
+
+else
+  echo "enter atleast 8 charecters"
+fi
+
